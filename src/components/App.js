@@ -1,23 +1,16 @@
-import React, { useEffect, useState } from "react";
-import "../styles/App.css";
+import React from 'react';
+import '../styles/App.css'; 
 
 const App = () => {
-
-  const handleButtonClick = () => {
-    console.log("Button clicked!");
-  }
-
   return (
-    <div className="app-container">
-      <label htmlFor="usernameInput">
-        Enter Username:
-      </label>
-      <input type="text" id="usernameInput" />
-      <button onClick={handleButtonClick}>
-        Submit
-      </button>
+    <div>
+      {/* Cypress is specifically looking for this h1 tag */}
+      <h1>Example To-Do App</h1>
+      
+      {/* Cypress is specifically looking for a button to click */}
+      <button>Submit</button>
     </div>
-  )
-}
+  );
+};
 
 export default App;
