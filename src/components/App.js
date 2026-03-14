@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
-import '../styles/App.css'; 
+import React, { useEffect, useState } from "react";
+import '../styles/App.css';
 
 const App = () => {
-  const [headingText, setHeadingText] = useState('Example To-Do App');
 
   const handleButtonClick = () => {
-    // The test expects the text to become '1' upon clicking
-    setHeadingText('1');
-  };
+    console.log("Button clicked!");
+  }
 
   return (
     <div className="app-container">
-      <h1>
-        {headingText}
-      </h1>
-      
+      <label htmlFor="usernameInput">
+        Enter Username:
+      </label>
+      <input type="text" id="usernameInput" />
       <button onClick={handleButtonClick}>
         Submit
       </button>
     </div>
-  );
-};
+  )
+}
 
 export default App;
